@@ -1,0 +1,87 @@
+.why-background {
+    background: linear-gradient(#0000005d, #0000005d) ,url('../img/how-background.jpg') center center no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    position: relative;
+    top: -50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        color: setColor(lightenBlue);
+    }
+}
+
+.why-page {
+    background: white !important;
+
+    .container {
+        @include responsive(mobile) {
+            padding: 0;
+        }
+    }
+
+    .road-map {
+        margin: 50px 0px 0px 0px;
+        background: setColor(light);
+        border-radius: 10px;
+
+        .design {
+            color: setColor(dark);
+
+            .in-circle {
+                background: setColor(dark);
+                color: setColor(lightenBlue);
+                height: 60px;
+                width: 60px;
+
+                @include responsive(android) {
+                    height: 55px;
+                    width: 55px;
+                    font-size: 30px;
+                }
+
+            }
+
+            h1 {
+                @include responsive(android) {
+                    font-size: 26px !important;
+                }
+            }
+        }
+
+        .content {
+            p {
+                margin-left: 75px;
+                font-weight: 500;
+
+                @include responsive(mobile) {
+                    margin-left: 0 !important;
+                }
+
+                @include responsive(android) {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+.why-ambiseek {
+    background: setColor(light);
+
+    .reasons {
+        .content {
+            .icon {
+                height: 180px;
+                width: 180px;
+                background: setColor(dark);
+                color: setColor(lightenBlue);
+                margin: 10px auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+.how-background {
+    background: linear-gradient(#0000005d, #0000005d) ,url('../img/why-background.jpg') center center no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    position: relative;
+    top: -50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        color: setColor(lightenBlue);
+    }
+}
+
+.how-it-works {
+    background: setColor(light);
+}
+
+.road-map {
+
+    .design {
+        text-align: center;
+        color: setColor(dark);
+
+        .in-circle {
+            height: 60px;
+            width: 60px;
+            color: setColor(lightenBlue);
+            background: setColor(dark);
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .arrow {
+            background: setColor(dark);
+            width: 5.8px;
+            height: calc(100% - 80px);
+            margin: 0px auto;
+        }
+
+        .fa-arrow-down {
+            position: relative;
+            top: -22px;
+            color: setColor(dark);
+        }
+    }
+
+    .content {
+        padding: 30px;
+
+        h1 {
+            position: relative;
+            top: -25px;
+            font-size: 38px;
+
+            @include responsive(tablet) {
+                font-size: 30px !important;
+            }
+        }
+
+        p {
+            margin-left: 42px;
+
+            @include responsive(tablet) {
+                margin-left: 5px;
+            }
+        }
+    }
+}

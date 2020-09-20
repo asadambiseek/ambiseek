@@ -1,0 +1,116 @@
+.intro {
+    background:url('../img/background.svg') center center no-repeat ;
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 90px);
+
+    .intro-primary-text {
+        padding-top: 50px;
+        margin-left: 50px;
+        
+        @include responsive(laptop) {
+            margin-left: 20px;
+            padding-top: 20px;
+            width: 85% !important;
+        }
+        
+        h1 {
+            color: setColor(dark) !important;
+            @include responsive(laptop) {
+                font-size: 32px !important;
+            }
+        }
+
+        button {
+            background: setColor(dark);
+            color: setColor(light);
+        }
+    }    
+    
+    .fa-angle-double-down {
+        animation-duration: 2s;
+        color: setColor(dark) !important;
+        
+        @include responsive(laptop) {
+            font-size: 48px !important;
+        }
+    }
+}
+
+.how {
+    background: white !important; 
+}
+.how, .why {
+    background: setColor(light);
+
+    .title {
+        @include responsive(laptop) {
+            font-size: 36px !important;
+        }
+    }
+
+    button.btn-primary {
+        transition: .3s ease-out;
+
+        &:hover {
+            margin-left: 30px;
+        }
+    }
+
+    .cards {
+        width: 550px;
+        box-shadow: 0px 0px 14px setColor(shadow);
+        
+        @include responsive(laptop) {
+            width: 420px !important;
+            margin: auto;
+        }
+        
+        @include responsive(tablet) {
+            width: 360px !important;
+            padding-bottom: 30px !important;
+        }
+
+        @include responsive(mobile) {
+            width: 320px !important;
+        }
+
+        .fad {
+            background: setColor(dark);
+            width: 60px;
+            text-align: center;
+            padding: 15px 0px;
+            border-radius: 100px;
+        }
+    }
+}
+
+//Apply Now
+.apply-now {
+    position: fixed;
+    right: 30px;
+    bottom: 25px;
+    transition: .3s ease-out;
+    z-index: 99;
+    background: transparent;
+    
+    button {
+        box-shadow: 0px 0px 14px #00000070;
+        border-radius: 100px;
+    }
+
+    span {
+        @include responsive(mobile) {
+            display: none;
+        }
+    }
+    
+    &:hover {
+        transform: scale(1.1);
+    }
+    
+    img {
+        animation-duration: 2s !important;
+    }
+        
+}

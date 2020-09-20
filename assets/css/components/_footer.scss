@@ -1,0 +1,46 @@
+footer {
+    background: setColor(dark) !important;
+    color: setColor(light) !important;
+    z-index: 95;
+
+    .column-2, .column-1 {
+        display: flex;
+        justify-content: center;
+
+        @include responsive(tablet) {
+            justify-content: flex-start;
+        }
+    }
+
+    .quick-links.navbar-nav {
+        .nav-item {
+            transition: .3s ease-out;
+
+            &:hover {
+                padding-left: 30px; 
+            }
+
+            .nav-link {
+                color: setColor(light);
+            }
+        }
+    }
+
+    .social-links.navbar-nav {
+        .nav-item {
+            
+            .nav-link {
+                color: setColor(light);
+                transition: .3s ease-out;
+
+                &:hover {
+                    color: setColor(lightenBlue) !important;
+                }
+            }
+        }
+    }
+
+    .copyright {
+        background: setColor(shadow);
+    }
+}

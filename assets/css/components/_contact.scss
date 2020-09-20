@@ -1,0 +1,81 @@
+.contact-us {
+    background: setColor(light);
+
+    .contact-form {
+        width: 100%;
+        background: white;
+        border-radius: 10px;
+
+        .form-field {
+
+            textarea {
+                width: 100%;
+                height: 235px;
+                padding: 15px 25px 15px 25px;
+                font-size: 18px;
+                font-weight: 500;
+                overflow: hidden;
+                border-radius: 5px;
+                border: none;
+                outline: none;
+                background:#0e153a20;
+            }
+
+            .form-field-text, .form-field-text-modified {
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+
+                i {
+                    height: 100%;
+                    text-align: center;
+                    width: 40px;
+                }
+
+                input {
+                    border: none;
+                    outline: none;
+                    background: transparent;
+                    padding: 10px 10px 10px 5px;
+                    font-weight: 500;
+                    width: 100%;
+                }                
+            }
+
+            .form-field-text {
+                border: 2px solid #0e153a50;
+
+            }
+
+            .form-field-text-modified {
+                background:#0e153a20;
+            }
+        }
+
+        .btn {
+            background: setColor(dark);
+            font-weight: 500;
+        }
+    }
+
+    .contact-details {
+        width: 100%;
+        background: setColor(dark);
+        border-radius: 10px;
+
+        .details {
+
+            .locations, .email, .phone {
+                height: 65px;
+            }
+
+            .phone {
+                height: auto;
+            }
+
+            .fad {
+                width: 60px !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+$palette: (
+    dark: #0e153a,
+    light: #e2f3f5,
+    lightenBlue: #22d1ee,
+    darkenBlue: #3d5af1,
+    shadow: #00000040
+);
+
+@function setColor($color) {
+    @return map-get($palette, $color );
+}
+
+$breakpoints: (
+    android: 360px,
+    mobile: 576px,
+    tablet: 768px,
+    laptop: 1150px,
+    laptopLarge: 1250px,
+    desktop: 1366px,
+    desktopLarge: 1440px,
+    desktopExtraLarge: 1920px
+);
+
+@function setPoint($point) {
+    @return map-get($breakpoints, $point );
+}
+
+@mixin responsive($point) {
+    @media (max-width: #{setPoint($point)}) {
+        @content;
+    }
+}
+
+body,html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}

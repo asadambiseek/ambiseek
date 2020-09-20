@@ -1,0 +1,120 @@
+header {
+    height: 90px;
+}
+
+nav {
+    height: 90px;
+    width: 100%;
+    box-shadow: 0px 4px 14px setColor(shadow);
+    position: fixed;
+    background: setColor(dark);
+    z-index: 9 !important;
+    
+    .menu-button {
+        color: setColor(light) !important;
+        position: absolute;
+        right: 20px;
+        display: none;
+
+        @include responsive(laptopLarge) {
+            display: block !important;
+        }
+    }
+    
+    .links {
+        position: absolute;
+        right: 30px;
+
+
+        @include responsive(laptopLarge) {
+            position: fixed !important;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 280px;
+            background: setColor(dark);
+            transform: translate3d(-120%, 0, 0);
+            transition: .3s ease-out;
+
+            .navbar-nav {
+                flex-flow: column !important;
+                margin-top: 30px;
+            }
+        }
+
+        .nav-item {
+            margin: auto 5px !important;
+            padding: 0px 15px 0px 15px !important;
+            border-radius: 100px;
+            transition: .3s ease-out;
+           
+            @include responsive(laptopLarge) {
+                margin-top: 10px !important;
+            }
+
+            &:hover {
+                background: setColor(lightenBlue);
+                
+                .nav-link {
+                    color: setColor(dark);
+                }
+            }
+
+            &.active {
+                background: setColor(lightenBlue);
+
+                .nav-link {
+                    color: setColor(dark);
+                    font-weight: 500 !important;
+                }
+            }
+
+            .nav-link {
+                display: flex;
+                align-items: center;
+
+                i {
+                    font-size: 22px !important;
+                }
+
+                color: setColor(light);
+
+                @include responsive(laptopLarge) {
+                    color: setColor(lightenBlue);
+                    font-weight: 500 !important;
+
+                    i {
+                        margin-right: 30px !important;
+                        width: 35px;
+                        text-align: center;
+                    }
+                }
+            }
+
+            .dropdown-menu {
+                background: setColor(light);
+
+                .dropdown-item {
+                    transition: .2s ease-out;
+                    &:hover {
+                        background: setColor(dark);
+                        color: setColor(light);
+                        padding-left: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    .overlay {
+        background: setColor(shadow);
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0; 
+        display: none;
+    }
+
+    .display {
+        display: block;
+        transform: translate3d(0, 0, 0);
+    }
+}
