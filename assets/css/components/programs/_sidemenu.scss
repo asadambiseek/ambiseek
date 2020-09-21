@@ -1,0 +1,52 @@
+.flex-container {
+    @include responsive(laptop) {
+        flex-flow: column;
+        .side-menu {
+            width: 100%;
+        }
+    }
+}
+
+.for_program {
+    flex-flow: column;
+    .side-menu {
+        width: 100%;
+    }
+}
+
+.side-menu {
+    background-color: setColor(light);
+    width: 280px;
+
+    .nav-item {
+        margin: 10px 0px;
+        margin-right: 15px;
+        border-radius: 0px 100px 100px 0px;
+        overflow: hidden;
+        
+        .nav-link {
+            transition: .2s ease-out;
+            padding-left: 10px;
+            color: setColor(dark);
+
+            i {
+                width: 30px;
+                text-align: center;
+            }
+        }
+
+        &.active {
+            .nav-link {
+                color: setColor(light);
+                background: setColor(dark);
+            }
+        }
+
+        &:hover {
+            .nav-link {
+                color: setColor(light);
+                background: setColor(dark);
+            }
+        }
+    }
+}
