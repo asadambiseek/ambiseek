@@ -1,5 +1,10 @@
 .intro {
     background:url('../img/background.svg') center center no-repeat ;
+
+    @include responsive(mobile) {
+        background: linear-gradient(#ffffff56, #ffffff0e), url('../img/backgroundSm.jpg') center center no-repeat;
+    }
+
     background-size: cover;
     background-position: center;
     height: calc(100vh - 90px);
@@ -9,9 +14,9 @@
         margin-left: 50px;
         
         @include responsive(laptop) {
-            margin-left: 20px;
+            margin-left: 0;
             padding-top: 20px;
-            width: 85% !important;
+            width: 100% !important;
         }
         
         h1 {
@@ -46,6 +51,10 @@
     .title {
         @include responsive(laptop) {
             font-size: 36px !important;
+        }
+
+        @include responsive(mobile) {
+            text-align: center;
         }
     }
 

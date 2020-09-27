@@ -1,51 +1,58 @@
 .flex-container {
-    @include responsive(laptop) {
+    display: flex;
+    justify-content: space-between;
+    
+    @include responsive(tablet) {
         flex-flow: column;
-        .side-menu {
-            width: 100%;
+
+        .side-wrapper {
+            width: 100% !important;
+            border: none !important;
         }
     }
-}
 
-.for_program {
-    flex-flow: column;
-    .side-menu {
-        width: 100%;
+    &.for-programs {
+
+        .side-wrapper {
+            width: 480px;
+        }
     }
-}
 
-.side-menu {
-    background-color: setColor(light);
-    width: 280px;
+    .side-wrapper {
+        width: 280px;
+        height: auto;
+        border-right: 3px solid setColor(dark);
 
-    .nav-item {
-        margin: 10px 0px;
-        margin-right: 15px;
-        border-radius: 0px 100px 100px 0px;
-        overflow: hidden;
-        
-        .nav-link {
-            transition: .2s ease-out;
-            padding-left: 10px;
-            color: setColor(dark);
+        .side-bar {
+            position: sticky;
+            top: 100px;
 
-            i {
-                width: 30px;
-                text-align: center;
-            }
-        }
+            .nav-item {
+                margin: 10px 5px 10px 0px;
 
-        &.active {
-            .nav-link {
-                color: setColor(light);
-                background: setColor(dark);
-            }
-        }
+                &:nth-child(9) {
+                    margin-bottom: 20px;
+                }
 
-        &:hover {
-            .nav-link {
-                color: setColor(light);
-                background: setColor(dark);
+                &.active, &:hover {
+                    background: setColor(dark);
+                    border-radius: 0px 100px 100px 0px;
+                    transition: .3s ease-out;
+                    
+                    .nav-link {
+                        color: setColor(light);
+                    }
+                }
+
+                .nav-link {
+                    color: setColor(dark);
+                    font-size: 18px;
+
+                    i {
+                        width: 35px;
+                        text-align: center;
+                    }
+                }
             }
         }
     }
